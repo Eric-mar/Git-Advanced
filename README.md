@@ -119,7 +119,12 @@ PS C:\Users\Cococe Ltd\Advanced-new-Git>
 ### Q1
 ``` bash
 
+u have two options for integrating your 
+        feature into the main branch: merging directly or rebasing
+         and then merging. The former
 
+         Line A: Original
+Line B: Main branch change
 ```
 ### Q1
 ``` bash
