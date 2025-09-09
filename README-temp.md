@@ -538,6 +538,142 @@ Dropped refs/stash@{0} (505ca78b5beffd234f243c0ef3cfe817b390cf6f)
 PS C:\Users\Cococe Ltd\Advanced-new-Git>
 
 ```
+### Q3
+``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git add cnflicts.txt
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "editing on main"
+[main 354bdb8] editing on main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git checkout new-feature-branch
+Switched to branch 'new-feature-branch'
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git add cnflicts.txt
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "editing on new-feature"
+[new-feature-branch 7abb3a6] editing on new-feature
+ 1 file changed, 4 insertions(+)
+ create mode 100644 cnflicts.txt
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git checkout main               
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git merge new-feature-branch
+Auto-merging cnflicts.txt
+CONFLICT (add/add): Merge conflict in cnflicts.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git add .
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "after merging the conflicts"
+[main 4da5731] after merging the conflicts
+PS C:\Users\Cococe Ltd\Advanced-new-Git>
+
+```
+
+### Q4
+``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git checkout 354bdb8a504f3c7410952371790f20d9a2d206be
+HEAD is now at 354bdb8 editing on main
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "testing commit in the detached state" 
+HEAD detached at 354bdb8
+nothing to commit, working tree clean
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git checkout -b fix-detached-head              
+Switched to a new branch 'fix-detached-head'
+PS C:\Users\Cococe Ltd\Advanced-new-Git>
+
+```
+### Q6
+``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> echo /tmp > .gitignore  
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed) 
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git add .
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "add .gitignore file "
+[main 68089ed] add .gitignore file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git status
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
+no changes added to commit (use "git add" and/or "git commit -a")PS C:\Users\Cococe Ltd\Advanced-new-Git> git status
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")PS C:\Users\Cococe Ltd\Advanced-new-Git> git add .
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git status
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git commit -m "adding an ignore file"
+[main 3a872af] adding an ignore file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
+```
+
+### Q 7 & 8
+``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag v1.0
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag v2.0
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag eric
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag
+eric
+v1.0
+v2.0
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag -d eric
+Deleted tag 'eric' (was a435f8f)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag v2.0
+fatal: tag 'v2.0' already exists
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag -d v2.0
+Deleted tag 'v2.0' (was a435f8f)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git tag -d v1.0 
+Deleted tag 'v1.0' (was a435f8f)
+PS C:\Users\Cococe Ltd\Advanced-new-Git>
+
+```
+
+### Q9
+``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git branch
+  0a
+  feature-branch
+  fix-detached-head
+  ft/branch
+  ft/improved-branch-name
+* main
+  new-feature-branch
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git remote -v
+origin  https://github.com/Eric-mar/Git-Advanced.git (fetch)
+origin  https://github.com/Eric-mar/Git-Advanced.git (push)
+
+```
+
+### Q10
+``` bash
+
+```
+
 
 
 
