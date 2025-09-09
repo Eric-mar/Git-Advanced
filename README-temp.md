@@ -682,6 +682,28 @@ PS C:\Users\Cococe Ltd\Advanced-new-Git>
 
 ### Q10
 ``` bash
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.05 KiB | 26.00 KiB/s, done.
+From https://github.com/Eric-mar/Git-Advanced
+ * branch            main       -> FETCH_HEAD
+   5ed15a7..291d855  main       -> origin/main
+Updating 5ed15a7..291d855
+Fast-forward
+ README-temp.md | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\Cococe Ltd\Advanced-new-Git>
 
 ```
 
