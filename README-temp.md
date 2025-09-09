@@ -666,6 +666,17 @@ PS C:\Users\Cococe Ltd\Advanced-new-Git> git branch
 PS C:\Users\Cococe Ltd\Advanced-new-Git> git remote -v
 origin  https://github.com/Eric-mar/Git-Advanced.git (fetch)
 origin  https://github.com/Eric-mar/Git-Advanced.git (push)
+PS C:\Users\Cococe Ltd\Advanced-new-Git> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.21 KiB | 621.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Eric-mar/Git-Advanced.git
+   a435f8f..5ed15a7  main -> main
+PS C:\Users\Cococe Ltd\Advanced-new-Git>
 
 ```
 
